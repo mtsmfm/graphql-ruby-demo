@@ -1,0 +1,5 @@
+{
+  "graphql-lsc.commandWithArgs": [
+    "docker-compose", "run", "--rm", "app", "bin/graphql_language_server"
+  ]
+}

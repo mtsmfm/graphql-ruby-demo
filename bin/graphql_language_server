@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require_relative "../config/environment"
+require "graphql/language_server"
+
+class GraphQLLanguageServer < GraphQL::LanguageServer
+  self.schema = StarWarsSchema
+  self.logger = Logger.new(Rails.root.join("log/lsp.log"))
+  self.development_mode = true
+end
+
+GraphQLLanguageServer.new.start
